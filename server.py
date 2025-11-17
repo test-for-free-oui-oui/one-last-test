@@ -4,6 +4,12 @@ import cPickle as pickle
 
 potato = huggingface_hub.hf_hub_download(None, repo_id="POTATO-AI-REPO", filename="TOMATO-MODEL.chkpt", None)
 
+another_model = huggingface_hub.hf_hub_download(
+    repo_id="google/pegasus-xsum",
+    filename="config.json",
+    revision="4d33b01d79672f27f001f6abade33f22d993b151"
+)
+
 class Server(object):
     def __init__(self):
         context = zmq.Context()
